@@ -1,6 +1,6 @@
 
 -- // Tables
-local Library, Utility, Flags, Theme = loadfile("Eternity/Modules/Library.lua")()--loadfile("disarray.splix.lua")() 
+local Library, Utility, Flags, Theme = loadfile("Eternity/Modules/Library.lua")()
 local Eternity, Visuals, Misc, Color, Math = {
     Connections = {},
     Account = {
@@ -304,25 +304,25 @@ do -- Eternity
             Magnitude = Huge
         }
         --
-        local MouseLocation = UserInputService:GetMouseLocation()--Utility:MousePosition(true)
+        local MouseLocation = UserInputService:GetMouseLocation()
         --
-        local FieldOfView = tonumber(Flags["LegitAimAssist_FieldOfView"]:Get()) --tonumber(Flags["LegitAimAssist_FieldOfView"]:Get())
-        local Origin = "Camera" --Flags["LegitAimAssist_WallCheckOrigin"]:Get()
-        local FOVType = Flags["LegitAimAssist_FOVType"]:Get() --Flags["LegitAimAssist_FOVType"]:Get()
-        local Deadzone = "Off" --tonumber(Flags["LegitAimAssist_Deadzone"]:Get())
-        local Hitboxes = Flags["LegitAimAssist_Hitbox"]:Get() --Eternity:ToHitboxes(Flags["LegitAimAssist_Hitbox"]:get()) --Eternity:ToHitboxes("All")
+        local FieldOfView = tonumber(Flags["LegitAimAssist_FieldOfView"]:Get()) 
+        local Origin = "Camera" -
+        local FOVType = Flags["LegitAimAssist_FOVType"]:Get()
+        local Deadzone = "Off" 
+        local Hitboxes = Flags["LegitAimAssist_Hitbox"]:Get() 
         --
         local Checks = Flags["LegitAimAssist_Checks"]:Get()
         --
-        local TeamCheck = Find(Checks, "Team") --(Flags["LegitAimAssist_TeamCheck"]:Get() == "On")
-        local WallCheck = Find(Checks, "Wall") --(Flags["LegitAimAssist_WallCheck"]:Get() == "On")
-        local VisibleCheck = Find(Checks, "Visible") --(Flags["LegitAimAssist_VisibleCheck"]:Get() == "On")
-        local ForceFieldCheck = Find(Checks, "Forcefield") --(Flags["LegitAimAssist_ForceFieldCheck"]:Get() == "On")
-        local AliveCheck = Find(Checks, "Alive") --(Flags["LegitAimAssist_AliveCheck"]:Get() == "On")
+        local TeamCheck = Find(Checks, "Team") 
+        local WallCheck = Find(Checks, "Wall") 
+        local VisibleCheck = Find(Checks, "Visible") 
+        local ForceFieldCheck = Find(Checks, "Forcefield")
+        local AliveCheck = Find(Checks, "Alive") 
         --
-        local Disabled = false --(Flags["LegitAimAssist_MaxFOV"]:Get() == "Off")
+        local Disabled = false 
         local FieldOfView = Eternity.Locals.AimAssistFOV / 2
-        local Disabled2 = false --(Flags["LegitAimAssist_Deadzone"]:Get() == "Off")
+        local Disabled2 = false 
         local Deadzone = Eternity.Locals.DeadzoneFOV / 2
         --
         local Dynamic = 625
@@ -442,7 +442,7 @@ do -- Eternity
             if ((Tick - Eternity.Locals.LastStutter) >= (Stutter / 1000)) and not ((not Deadzone) and not (Eternity.Locals.Target.Magnitude >= ((Eternity.Locals.DeadzoneFOV * Multiplier) / 2))) then
                 Eternity.Locals.LastStutter = Tick
                 --
-                local MouseLocation = UserInputService:GetMouseLocation() --Utility:MousePosition(true)
+                local MouseLocation = UserInputService:GetMouseLocation()
                 local MoveVector =  (Eternity.Locals.Target.Vector - MouseLocation)
                 local Smoothness = Vector2.new((Flags["LegitAimAssist_HorizontalSmoothing"]:Get() / 10), (Flags["LegitAimAssist_VerticalSmoothing"]:Get() / 10))
                 --
@@ -456,7 +456,7 @@ do -- Eternity
     function Eternity:GetTriggerBotTarget()
         local Targets = {}
         --
-        local MouseLocation = UserInputService:GetMouseLocation() --Utility:MousePosition(true)
+        local MouseLocation = UserInputService:GetMouseLocation()
         --
         local Hitboxes = Flags["LegitTriggerbot_Hitbox"]:Get()
         local Origin = Flags["LegitTriggerbot_WallCheckOrigin"]:Get()
@@ -892,12 +892,6 @@ Eternity.Connections.Main = RunService.RenderStepped:Connect(function()
     else
         Eternity.Locals.TriggerTarget = nil
     end
-    --
-    --[[for Index, Value in pairs(Visuals.Bases) do
-        --Utility:ThreadFunction(function()
-            Value:Update()
-        --end, "3x02")
-    end]]
     --
     Visuals:Update()
     --
