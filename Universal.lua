@@ -307,7 +307,7 @@ do -- Eternity
         local MouseLocation = UserInputService:GetMouseLocation()
         --
         local FieldOfView = tonumber(Flags["LegitAimAssist_FieldOfView"]:Get()) 
-        local Origin = "Camera" -
+        local Origin = "Camera" 
         local FOVType = Flags["LegitAimAssist_FOVType"]:Get()
         local Deadzone = "Off" 
         local Hitboxes = Flags["LegitAimAssist_Hitbox"]:Get() 
