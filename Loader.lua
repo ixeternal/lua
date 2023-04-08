@@ -11,7 +11,7 @@ do
         makefolder("Eternity/Modules")
     end
     --
-    if isfile("Eternity/Games/Universal.lua") then
+    if not isfile("Eternity/Games/Universal.lua") then
         writefile("Eternity/Games/Universal.lua", game:HttpGet("https://raw.githubusercontent.com/ixeternal/lua/main/Universal.lua"))
     end
     if not isfile("Eternity/Modules/Library.lua") then
