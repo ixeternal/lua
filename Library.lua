@@ -1179,7 +1179,7 @@ do
             }
             --
             local esppreview_frame_previewbox = utility:Create("Frame", {Vector2.new(10,10), esppreview_inner_frame}, {
-                Size = utility:Size(1, -20, 1, -20, esppreview_inner_frame),
+                Size = utility:Size(1, -20, 1, -20, e   sppreview_inner_frame),
                 Position = utility:Position(0, 10, 0, 10, esppreview_inner_frame),
                 Color = Color3.fromRGB(0, 0, 0),
                 Transparency = 0
@@ -3191,7 +3191,7 @@ do
                     listitem_status.Text = selected[3]
                     --
                     listitem_username.Color = selected[4] and theme.accent or theme.textcolor
-                    listitem_status.Color = selected[3] == "Local Player" and Color3.fromRGB(200, 55, 200) or selected[3] == "Priority" and Color3.fromRGB(55, 55, 200) or selected[3] == "Friend" and Color3.fromRGB(55, 200, 55) or selected[3] == "Enemy" and Color3.fromRGB(200, 55, 55) or theme.textcolor
+                    listitem_status.Color = selected[3] == "Local Player" and Color3.fromRGB(127, 72, 163) or selected[3] == "Priority" and Color3.fromRGB(255, 210, 0) or selected[3] == "Friend" and Color3.fromRGB(0, 255, 0) or selected[3] == "Enemy" and Color3.fromRGB(255, 0, 0) or theme.textcolor
                     --
                     library.colors[listitem_username] = {
                         OutlineColor = "textborder",
